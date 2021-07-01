@@ -12,21 +12,21 @@
 		{
 			"kind": "main",
 			"tag": "com-amcharts-forcedirtree",
-			"url": "https://babar-s-v.github.io/sac_wdgets/amCharts/radialbarchart.js",
+			"url": "https://ravichvj.github.io/sac-amcharts/forcedirtree.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
 			"tag": "com-amcharts-forcedirtree-styling",
-			"url": "https://babar-s-v.github.io/sac_wdgets/amCharts/radialbarchart_styling.js",
+			"url": "https://ravichvj.github.io/sac-amcharts/forcedirtree_styling.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "builder",
 			"tag": "com-amcharts-forcedirtree-builder",
-			"url": "https://babar-s-v.github.io/sac_wdgets/amCharts/radialbarchart_builder.js",
+			"url": "https://ravichvj.github.io/sac-amcharts/forcedirtree_builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
