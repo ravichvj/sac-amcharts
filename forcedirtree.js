@@ -80,13 +80,16 @@
         
         onCustomWidgetAfterUpdate(changedProperties) {
 			if ("color" in changedProperties) {
-				//this._Color = changedProperties["color"];
+				this._Color = changedProperties["color"];
+        this.loadthis();
 			}
 			if ("title" in changedProperties) {
 				this._chartTitle = changedProperties["title"];
+        this.loadthis();
 			}
 			if ("titlefontsize" in changedProperties) {
 				this._chartTitleFontSize = changedProperties["titlefontsize"];
+        this.loadthis();
 			}
 			if (this._firstConnection === 1) {
 				this.loadthis();
