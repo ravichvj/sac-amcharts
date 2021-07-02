@@ -108,9 +108,11 @@
             let myChart = this.shadowRoot.getElementById('chartdiv');
 			myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
 			myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";
-			if(this._chartTitle && this._chartTitle.trim() !== "") {
-				var chartTitle = this.shadowRoot.getElementById('chartTitle');
-				chartTitle.innerText = this._chartTitle.trim();
+      var chartTitle = this.shadowRoot.getElementById('chartTitle');
+      chartTitle.innerText = this._chartTitle;
+      if(this._chartTitle && this._chartTitle.trim() !== "") {
+			
+			
 				if(this._chartTitleFontSize && this._chartTitleFontSize > 0) {
 					chartTitle.style.fontSize = this._chartTitleFontSize + "px";
 				}
