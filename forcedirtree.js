@@ -87,6 +87,8 @@
 			}
 			if ("title" in changedProperties) {
 				this._chartTitle = changedProperties["title"];
+        var chartTitle = this.shadowRoot.getElementById('chartTitle');
+        chartTitle.innerText = this._chartTitle;
         this.loadthis();
 			}
 			if ("titlefontsize" in changedProperties) {
