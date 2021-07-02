@@ -16,7 +16,7 @@
     const animatedjs = "https://cdn.amcharts.com/lib/4/themes/animated.js"
     const forcedirjs = "https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"
 //
-    let _series1Color;
+    let _Color;
     let _chartTitle;
     let _chartTitleFontSize;
 // Template DOM
@@ -80,7 +80,7 @@
         
         onCustomWidgetAfterUpdate(changedProperties) {
 			if ("color" in changedProperties) {
-				this._series1Color = changedProperties["color"];
+				//this._Color = changedProperties["color"];
 			}
 			if ("title" in changedProperties) {
 				this._chartTitle = changedProperties["title"];
