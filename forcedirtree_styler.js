@@ -1,3 +1,4 @@
+/*
 (function()  {
 	let template = document.createElement("template");
 	template.innerHTML = `
@@ -45,3 +46,5 @@
 
 customElements.define("com-amcharts-forcedirtree-styling", ForcedirtreeStylingPanel);
 }) ();
+
+*/
