@@ -3,7 +3,7 @@
 	template.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Radial Bar Chart Properties</legend>
+				<legend>Force directed Tree Properties</legend>
 				<table>
 					<tr>
 						<td>Color</td>
@@ -20,7 +20,7 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+			//this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
 		}
 
 		_submit(e) {
@@ -44,4 +44,4 @@
 	}
 
 customElements.define("com-amcharts-forcedirtree-styling", ForcedirtreeStylingPanel);
-})();
+}) ();
