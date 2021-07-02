@@ -48,3 +48,29 @@ customElements.define("com-amcharts-forcedirtree-styling", ForcedirtreeStylingPa
 }) ();
 
 */
+(function(){
+	let template = document.createElement("template");
+	template.innerHTML = `
+		<form id="form">
+			<fieldset>
+				<legend>Force directed Tree Properties</legend>
+				<table>
+					<tr>
+						<td>Color</td>
+						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+					</tr>
+				</table>
+				<input type="submit" style="display:none;">
+			</fieldset>
+		</form>
+	`;
+	class ForcedirtreeStylingPanel extends HTMLElement {
+		constructor() {
+			super();
+			this._shadowRoot = this.attachShadow({mode: "open"});
+			this._shadowRoot.appendChild(template.content.cloneNode(true));			
+		}
+	}	
+	customElements.define("com-amcharts-forcedirtree-styling", ForcedirtreeStylingPanel);
+
+}) ();
