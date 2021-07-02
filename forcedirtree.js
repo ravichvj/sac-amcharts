@@ -120,6 +120,7 @@
 			am4core.useTheme(am4themes_animated);
 			// Themes end
 ////////////////////////////////////////////////////////////////////
+        console.log("Drawing" + this._Color)
             var chart = am4core.create(myChart, am4plugins_forceDirected.ForceDirectedTree);
             var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries());
 
