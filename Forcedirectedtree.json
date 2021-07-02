@@ -22,6 +22,13 @@
 			"url": "https://ravichvj.github.io/sac-amcharts/forcedirtree_styling.js",
 			"integrity": "",
 			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-amcharts-forcedirtree-builder",
+			"url": "https://ravichvj.github.io/sac-amcharts/forcedirtree_builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}		
 	],
 	"properties": {

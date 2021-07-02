@@ -223,24 +223,7 @@
               })
 ////////////////////////////////////////////////////////////////////              
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-        
-
-        
-    
     customElements.define("com-amcharts-forcedirtree", forcedirtree);
 }
 ) ();
