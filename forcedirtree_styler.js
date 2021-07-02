@@ -22,7 +22,7 @@
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			//this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
 		}
-
+		/*
 		_submit(e) {
 			e.preventDefault();
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
@@ -33,7 +33,7 @@
 					}
 			}));
 		}
-
+		*/
 		set color(newColor) {
 			this._shadowRoot.getElementById("styling_color").value = newColor;
 		}
