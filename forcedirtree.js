@@ -117,7 +117,7 @@
 			am4core.useTheme(am4themes_animated);
 			// Themes end
 ////////////////////////////////////////////////////////////////////
-            var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+            var chart = am4core.create(myChart, am4plugins_forceDirected.ForceDirectedTree);
             var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries());
 
             chart.data = [
