@@ -76,10 +76,12 @@
 
         onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
+      console.log("Change Propert Triggered Before");
 		}
         
         onCustomWidgetAfterUpdate(changedProperties) {
 			if ("color" in changedProperties) {
+        console.log("Change Propert Triggered after");
 				this._Color = changedProperties["color"];
         this.loadthis();
 			}
@@ -120,7 +122,7 @@
 			am4core.useTheme(am4themes_animated);
 			// Themes end
 ////////////////////////////////////////////////////////////////////
-        console.log("Drawing" + this._Color)
+        
             var chart = am4core.create(myChart, am4plugins_forceDirected.ForceDirectedTree);
             var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries());
 
