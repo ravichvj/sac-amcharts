@@ -150,7 +150,7 @@
 
         chart.data = [
           {
-            name: "CoreC",
+            name: "CoreD",
             children: [
               {
                 name: "First",
