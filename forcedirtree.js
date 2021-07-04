@@ -53,7 +53,7 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        console.log(`LogginginConstructor`);
+        console.log(`Logging in Constructor`);
       }
 
       connectedCallback() {
