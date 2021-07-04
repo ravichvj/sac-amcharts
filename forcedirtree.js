@@ -76,22 +76,26 @@
 
         onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
+      console.log(`${this._props[title]}`);
       console.log("Change Propert Triggered Before");
 		}
         
-        onCustomWidgetAfterUpdate(changedProperties) {
+      onCustomWidgetAfterUpdate(changedProperties) {
+        
 			if ("color" in changedProperties) {
-        console.log("Change Propert Triggered after");
+        console.log(`${this._props[color]}`);
 				this._Color = changedProperties["color"];
         this.loadthis();
 			}
 			if ("title" in changedProperties) {
+        console.log(`${this._props[title]}`);
 				this._chartTitle = changedProperties["title"];
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
         this.loadthis();
 			}
 			if ("titlefontsize" in changedProperties) {
+        console.log(`${this._props[titlefotsize]}`);
 				this._chartTitleFontSize = changedProperties["titlefontsize"];
         this.loadthis();
 			}
@@ -100,18 +104,18 @@
 			}
 		}
 
-        onCustomWidgetResize(width, height){
+     /* onCustomWidgetResize(width, height){
 			if (this._firstConnection === 1) {
 				this.loadthis();
-			}
-        }
+			  }
+      }*/
 
-        loadthis() {
-            let myChart = this.shadowRoot.getElementById('chartdiv');
-			myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
-			myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";
-      var chartTitle = this.shadowRoot.getElementById('chartTitle');
-      chartTitle.innerText = this._chartTitle;
+      loadthis() {
+        let myChart = this.shadowRoot.getElementById('chartdiv');
+			  myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
+			  myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";
+        var chartTitle = this.shadowRoot.getElementById('chartTitle');
+        chartTitle.innerText = this._chartTitle;
       if(this._chartTitle && this._chartTitle.trim() !== "") {
 			
 			
