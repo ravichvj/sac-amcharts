@@ -54,10 +54,28 @@
         this._props = {};
         this._firstConnection = 0;
         console.log(`Logging in Constructor`);
+        if (this._firstConnection == 0) {
+          async function Loadlibs(that) {
+            try {
+              await loadScript(corejs);
+              await loadScript(chartsjs);
+              await loadScript(animatedjs);
+              await loadScript(forcedirjs);
+            } catch (e) {
+
+            } finally {
+              that._firstConnection == 1;
+              console.log(`Logging in Constructor libraries loaded`);              
+            }
+          }
+          Loadlibs(this);
+        }
+
       }
 
       connectedCallback() {
-        console.log(`Logging in connectedCallback`);
+        console.log(`Logging in connectedCallback - Loadthis`);
+        this.loadthis();
         if (this._firstConnection == 0) {
           async function Loadlibs(that) {
             try {
