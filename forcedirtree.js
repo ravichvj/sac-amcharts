@@ -54,10 +54,30 @@
         this._props = {};
         this._firstConnection = 0;
         console.log(`Logging in Constructor`);
+/////
+        
+          async function Loadlibs(that) {
+            try {
+              await loadScript(corejs);
+              await loadScript(chartsjs);
+              await loadScript(animatedjs);
+              await loadScript(forcedirjs);
+            } catch (e) {
+
+            } finally {
+              that._firstConnection == 1;
+              console.log(`Logging in constructor - Libraries loaded`);
+              
+            }
+          }
+          Loadlibs(this);
+        
+
       }
 
       connectedCallback() {
-        console.log(`Logging in connectedCallback - Loadthis`);        
+        console.log(`Logging in connectedCallback - Loadthis`);  
+        if (this._firstConnection == 1) { this.loadthis();}      
         if (this._firstConnection == 0) {
           async function Loadlibs(that) {
             try {
@@ -132,7 +152,7 @@
 
         chart.data = [
           {
-            name: "CoreE",
+            name: "CoreF",
             children: [
               {
                 name: "First",
