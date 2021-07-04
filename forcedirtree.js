@@ -53,7 +53,7 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        console.log(`Log ${this._firstConnection}`);
+        console.log(`Log${this._firstConnection}`);
       }
 
       connectedCallback() {
@@ -77,11 +77,11 @@
 
       onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = { ...this._props, ...changedProperties };
-        console.log(`Log ${this._firstConnection}`);
+        
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
-        console.log(`${this._firstConnection}`);
+        
         if ("color" in changedProperties) {          
           this._Color = changedProperties["color"];
           this.loadthis();
