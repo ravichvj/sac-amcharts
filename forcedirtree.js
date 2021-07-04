@@ -53,6 +53,7 @@
         });
         this._props = {};
         this._firstConnection = 0;
+        console.log(`inside constructor`);
       }
 
       connectedCallback() {
