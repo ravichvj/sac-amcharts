@@ -55,8 +55,8 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        this._ChartHeight = this.shadowRoot.host.clientHeight;
-        this._ChartWidth = this.shadowRoot.host.clientWidth;
+        //this._ChartHeight = this.shadowRoot.host.clientHeight;
+        //this._ChartWidth = this.shadowRoot.host.clientWidth;
         console.log(`Logging in Constructor`);
       }
 
@@ -118,8 +118,10 @@
       }  
       redraw() {  
         let myChart = this.shadowRoot.getElementById('chartdiv');
-        myChart.style.height = this._ChartHeight - 20 + "px";
-        myChart.style.width = this._ChartWidth + "px";
+        if (this._ChartHeight !== "" & this._ChartWidth !== ""){
+          myChart.style.height = this._ChartHeight  + "px";
+          myChart.style.width = this._ChartWidth + "px";
+        }
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
         if (this._chartTitle && this._chartTitle.trim() !== "") {
