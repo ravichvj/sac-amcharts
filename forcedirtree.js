@@ -125,7 +125,7 @@
             } finally {
               that._firstConnection == 1;
               console.log(`Logging in constructor - Libraries loaded`);
-              redraw();
+              that.redraw();
             }
           }          
           Loadlibs(this);
