@@ -54,31 +54,12 @@
         this._props = {};
         this._firstConnection = 0;
         console.log(`Logging in Constructor`);
-/////
-        
-          async function Loadlibs(that) {
-            try {
-              await loadScript(corejs);
-              await loadScript(chartsjs);
-              await loadScript(animatedjs);
-              await loadScript(forcedirjs);
-            } catch (e) {
-
-            } finally {
-              that._firstConnection == 1;
-              console.log(`Logging in constructor - Libraries loaded`);
-              
-            }
-          }
-          Loadlibs(this);
-        
-
       }
 
       connectedCallback() {
         console.log(`Logging in connectedCallback - Loadthis`);  
-        if (this._firstConnection == 1) { this.loadthis();}      
-        if (this._firstConnection == 0) {
+        this.loadthis();        
+        /*if (this._firstConnection == 0) {
           async function Loadlibs(that) {
             try {
               await loadScript(corejs);
@@ -94,7 +75,7 @@
             }
           }
           Loadlibs(this);
-        }
+        }*/
       }
 
       onCustomWidgetBeforeUpdate(changedProperties) {
@@ -131,6 +112,27 @@
        }*/
 
       loadthis() {
+//// Load Libraries first
+        if (this._firstConnection == 0) {
+          async function Loadlibs(that) {
+            try {
+              await loadScript(corejs);
+              await loadScript(chartsjs);
+              await loadScript(animatedjs);
+              await loadScript(forcedirjs);
+            } catch (e) {
+
+            } finally {
+              that._firstConnection == 1;
+              console.log(`Logging in constructor - Libraries loaded`);
+              redraw();
+            }
+          }          
+          Loadlibs(this);
+        } else { this.redraw(); }
+      
+      }  
+      redraw() {  
         let myChart = this.shadowRoot.getElementById('chartdiv');
         myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
         myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";
@@ -152,7 +154,7 @@
 
         chart.data = [
           {
-            name: "CoreF",
+            name: "CoreG",
             children: [
               {
                 name: "First",
