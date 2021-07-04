@@ -75,7 +75,8 @@
       }
 
       onCustomWidgetBeforeUpdate(changedProperties) {
-        this._props = { ...this._props, ...changedProperties };        
+        this._props = { ...this._props, ...changedProperties };
+        console.log(`Insidewidgetbeforeupdate`);
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
