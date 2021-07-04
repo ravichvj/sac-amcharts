@@ -57,6 +57,7 @@
       }
 
       connectedCallback() {
+        console.log(`Logging in connectedCallback`);
         if (this._firstConnection == 0) {
           async function Loadlibs(that) {
             try {
@@ -68,6 +69,7 @@
 
             } finally {
               that._firstConnection == 1;
+              console.log(`Logging in connectedCallback - beforeloadthis`);
               that.loadthis();
             }
           }
@@ -84,14 +86,17 @@
         console.log(`Logginginafterupdate`);
         if ("color" in changedProperties) {          
           this._Color = changedProperties["color"];
+          console.log(`Logging in Logginginafterupdate(Color) - beforeloadthis`);
           this.loadthis();
         }
         if ("title" in changedProperties) {          
-          this._chartTitle = changedProperties["title"];          
+          this._chartTitle = changedProperties["title"];
+          console.log(`Logging in Logginginafterupdate(Title) - beforeloadthis`);
           this.loadthis();
         }
         if ("titlefontsize" in changedProperties) {
           this._chartTitleFontSize = changedProperties["titlefontsize"];
+          console.log(`Logging in Logginginafterupdate(Titlefontsize) - beforeloadthis`);
           this.loadthis();
         }
         /*if (this._firstConnection === 1) {
