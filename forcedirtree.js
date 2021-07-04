@@ -76,18 +76,18 @@
 
         onCustomWidgetBeforeUpdate(changedProperties) {
 			  this._props = { ...this._props, ...changedProperties };      
-        console.log("Change Propert Triggered Before");
+        //console.log("Change Propert Triggered Before");
 		}
         
       onCustomWidgetAfterUpdate(changedProperties) {
         
 			if ("color" in changedProperties) {
-        console.log(`${changedProperties["color"]}`);
+        //console.log(`${changedProperties["color"]}`);
 				this._Color = changedProperties["color"];
         this.loadthis();
 			}
 			if ("title" in changedProperties) {
-        console.log(`${changedProperties["title"]}`);
+        //console.log(`${changedProperties["title"]}`);
 				this._chartTitle = changedProperties["title"];
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
