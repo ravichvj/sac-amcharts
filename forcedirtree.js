@@ -58,24 +58,7 @@
 
       connectedCallback() {
         console.log(`Logging in connectedCallback - Loadthis`);  
-        this.loadthis();        
-        /*if (this._firstConnection == 0) {
-          async function Loadlibs(that) {
-            try {
-              await loadScript(corejs);
-              await loadScript(chartsjs);
-              await loadScript(animatedjs);
-              await loadScript(forcedirjs);
-            } catch (e) {
-
-            } finally {
-              that._firstConnection == 1;
-              console.log(`Logging in connectedCallback - beforeloadthis`);
-              that.loadthis();
-            }
-          }
-          Loadlibs(this);
-        }*/
+        this.loadthis();
       }
 
       onCustomWidgetBeforeUpdate(changedProperties) {
@@ -99,10 +82,7 @@
           this._chartTitleFontSize = changedProperties["titlefontsize"];
           console.log(`Logging in Logginginafterupdate(Titlefontsize) - beforeloadthis`);
           this.loadthis();
-        }
-        /*if (this._firstConnection === 1) {
-          this.loadthis();
-        }*/
+        }        
       }
 
       /* onCustomWidgetResize(width, height){
@@ -134,8 +114,8 @@
       }  
       redraw() {  
         let myChart = this.shadowRoot.getElementById('chartdiv');
-        myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
-        myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";
+        /*myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
+        myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";*/
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
         if (this._chartTitle && this._chartTitle.trim() !== "") {
@@ -154,7 +134,7 @@
 
         chart.data = [
           {
-            name: "CoreG",
+            name: "CoreH",
             children: [
               {
                 name: "First",
