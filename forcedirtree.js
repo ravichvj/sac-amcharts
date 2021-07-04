@@ -53,7 +53,7 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        console.log(`Log${this._firstConnection}`);
+        console.log(`Logging in Constructor`);
       }
 
       connectedCallback() {
@@ -77,11 +77,11 @@
 
       onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = { ...this._props, ...changedProperties };
-        
+        console.log(`Logging in beforeupdate`);
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
-        
+        console.log(`Logging in afterupdate`);
         if ("color" in changedProperties) {          
           this._Color = changedProperties["color"];
           this.loadthis();
