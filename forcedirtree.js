@@ -57,8 +57,7 @@
       }
 
       connectedCallback() {
-        console.log(`Logging in connectedCallback - Loadthis`);
-        this.loadthis();
+        console.log(`Logging in connectedCallback - Loadthis`);        
         if (this._firstConnection == 0) {
           async function Loadlibs(that) {
             try {
