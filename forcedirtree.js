@@ -20,7 +20,7 @@
     let _chartTitle;
     let _chartTitleFontSize;
     let _ChartHeight;
-    let _ChartWiddth;
+    let _ChartWidth;
     // Template DOM
     let template = document.createElement("template");
     template.innerHTML = `
@@ -55,6 +55,8 @@
         });
         this._props = {};
         this._firstConnection = 0;
+        this._ChartHeight = "";
+        this._ChartWidth = "";
         console.log(`Logging in Constructor`);
       }
 
