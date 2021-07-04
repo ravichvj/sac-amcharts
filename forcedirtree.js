@@ -55,8 +55,6 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        //this._ChartHeight = this.shadowRoot.host.clientHeight;
-        //this._ChartWidth = this.shadowRoot.host.clientWidth;
         console.log(`Logging in Constructor`);
       }
 
@@ -119,8 +117,13 @@
       redraw() {  
         let myChart = this.shadowRoot.getElementById('chartdiv');
         if (this._ChartHeight !== "" & this._ChartWidth !== ""){
-          myChart.style.height = this._ChartHeight  + "px";
-          myChart.style.width = this._ChartWidth + "px";
+          myChart.style.height = this._ChartHeight -10  + "px";
+          myChart.style.width = this._ChartWidth -10 + "px";
+        } else {
+          this._ChartHeight = this.shadowRoot.host.clientHeight - 20 + px;
+          this._ChartWidth = this.shadowRoot.host.clientWidth - 20 + px;
+          myChart.style.height = this._ChartHeight;
+          myChart.style.width = this._ChartWidth;
         }
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
@@ -140,7 +143,7 @@
 
         chart.data = [
           {
-            name: "CoreI",
+            name: "CoreJ",
             children: [
               {
                 name: "First",
