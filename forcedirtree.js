@@ -19,6 +19,8 @@
     let _Color;
     let _chartTitle;
     let _chartTitleFontSize;
+    let _ChartHeight;
+    let _ChartWiddth;
     // Template DOM
     let template = document.createElement("template");
     template.innerHTML = `
@@ -53,6 +55,8 @@
         });
         this._props = {};
         this._firstConnection = 0;
+        this._ChartHeight = this.shadowRoot.host.clientHeight;
+        this._ChartWidth = this.shadowRoot.host.clientWidth;
         console.log(`Logging in Constructor`);
       }
 
@@ -85,11 +89,11 @@
         }        
       }
 
-      /* onCustomWidgetResize(width, height){
-       if (this._firstConnection === 1) {
-         this.loadthis();
-         }
-       }*/
+      onCustomWidgetResize(width, height){
+        this._ChartHeight = height;
+        this._ChartWidth = width;
+        this.redraw();       
+       }
 
       loadthis() {
 //// Load Libraries first
@@ -114,8 +118,8 @@
       }  
       redraw() {  
         let myChart = this.shadowRoot.getElementById('chartdiv');
-        /*myChart.style.height = this.shadowRoot.host.clientHeight - 20 + "px";
-        myChart.style.width = this.shadowRoot.host.clientWidth - 20 + "px";*/
+        myChart.style.height = this._ChartHeight - 20 + "px";
+        myChart.style.width = this._ChartWidth + "px";
         var chartTitle = this.shadowRoot.getElementById('chartTitle');
         chartTitle.innerText = this._chartTitle;
         if (this._chartTitle && this._chartTitle.trim() !== "") {
@@ -134,7 +138,7 @@
 
         chart.data = [
           {
-            name: "CoreH",
+            name: "CoreI",
             children: [
               {
                 name: "First",
