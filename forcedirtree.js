@@ -53,7 +53,7 @@
         });
         this._props = {};
         this._firstConnection = 0;
-        console.log(`${this._firstConnection}`);
+        console.log(`Log ${this._firstConnection}`);
       }
 
       connectedCallback() {
@@ -77,7 +77,7 @@
 
       onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = { ...this._props, ...changedProperties };
-        console.log(`${this._firstConnection}`);
+        console.log(`Log ${this._firstConnection}`);
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
