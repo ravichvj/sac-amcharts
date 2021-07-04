@@ -100,9 +100,9 @@
           console.log(`Logging in Logginginafterupdate(Titlefontsize) - beforeloadthis`);
           this.loadthis();
         }
-        if (this._firstConnection === 1) {
+        /*if (this._firstConnection === 1) {
           this.loadthis();
-        }
+        }*/
       }
 
       /* onCustomWidgetResize(width, height){
@@ -133,7 +133,7 @@
 
         chart.data = [
           {
-            name: "CoreD",
+            name: "CoreE",
             children: [
               {
                 name: "First",
