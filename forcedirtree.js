@@ -90,7 +90,7 @@
         if ("datasourceString" in changedProperties) {
           this._datasourceString = changedProperties["datasourceString"];
           console.log(`Logging in Logginginafterupdate(datasourceString) - beforeloadthis`);
-          console.log(`The Vvalue is`+this._datasourceSring);
+          console.log(`The Vvalue is`+this._datasourceString);
           this.loadthis();
         }
       }
@@ -151,7 +151,7 @@
 
         chart.data = [
           {
-            name: "CoreA",
+            name: "CoreB",
             children: [
               {
                 name: "First",
