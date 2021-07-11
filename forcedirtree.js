@@ -87,6 +87,12 @@
           console.log(`Logging in Logginginafterupdate(Titlefontsize) - beforeloadthis`);
           this.loadthis();
         }        
+        if ("datasourceString" in changedProperties) {
+          this._datasourceString = changedProperties["datasourceString"];
+          console.log(`Logging in Logginginafterupdate(datasourceString) - beforeloadthis`);
+          console.log(`The Vvalue is`+this._datasourceSring);
+          this.loadthis();
+        }
       }
 
       onCustomWidgetResize(width, height){
