@@ -89,8 +89,9 @@
         }        
         if ("datasourceString" in changedProperties) {
           this._datasourceString = changedProperties["datasourceString"];
+          this._dsource = JSON.parse(this._datasourceString);
           console.log(`Logging in Logginginafterupdate(datasourceString) - beforeloadthis`);
-          console.log(`The Vvalue is`+this._datasourceString);
+          console.log(`The Vvalue is`+this._dsource.value);
           this.loadthis();
         }
       }
