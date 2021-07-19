@@ -1,4 +1,4 @@
-(function()  {
+/*(function()  {
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<form id="form">
@@ -61,3 +61,5 @@
 
 	customElements.define("com-amcharts-forcedirtree-builder", ForcedirtreeBuilderPanel);
 })();
+
+*/
