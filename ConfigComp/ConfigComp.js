@@ -179,7 +179,7 @@
       }
 
   }
-  customElements.define("com.ui5form.configcomp", ConfigComp);
+  customElements.define("com-ui5form-configcomp", ConfigComp);
 
   // UTILS
   function loadthis(that) {

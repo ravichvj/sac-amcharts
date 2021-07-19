@@ -46,4 +46,21 @@
 customElements.define("com-amcharts-forcedirtree-styling", ForcedirtreeStylingPanel);
 }) ();
 
+,
+		{
+			"kind": "styling",
+			"tag": "com-ui5form-configcomp-styling",
+			"url": "https://ravichvj.github.io/sac-amcharts/ConfigComp/ConfigComp_styler.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-ui5form-configcomp-builder",
+			"url": "https://ravichvj.github.io/sac-amcharts/ConfigComp/ConfigComp_builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+
+
 */
