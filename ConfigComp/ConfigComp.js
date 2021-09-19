@@ -127,7 +127,7 @@
                   }
               }
           } catch (e) {}*/
-         
+          loadthis(this);
       }
 
       disconnectedCallback() {
@@ -144,7 +144,7 @@
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
-          loadthis(this);
+          
       }
 
       _firePropertiesChanged() {
