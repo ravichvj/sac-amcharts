@@ -2,7 +2,7 @@
   let _shadowRoot;
   let _id;
   let _password;
-  let _counter = 0;
+  
 
   let tmpl = document.createElement("template");
   tmpl.innerHTML = `
@@ -35,7 +35,7 @@
 
       constructor() {
           super();
-
+          var _counter = 0;
           _shadowRoot = this.attachShadow({
               mode: "open"
           });
