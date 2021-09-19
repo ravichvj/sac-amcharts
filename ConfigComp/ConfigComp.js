@@ -2,6 +2,7 @@
   let _shadowRoot;
   let _id;
   let _password;
+  let _counter = 0;
 
   let tmpl = document.createElement("template");
   tmpl.innerHTML = `
@@ -184,8 +185,7 @@
 
   // UTILS
   function loadthis(that) {
-      var that_ = that;
-    
+      var that_ = that;      
       let content = document.createElement('div');
       content.slot = "content";
       that_.appendChild(content);
@@ -223,7 +223,8 @@
               viewContent: jQuery(_shadowRoot.getElementById(_id + "_oView")).html(),
           });
           oView.placeAt(content);
-
+          that._counter += 1;
+          console.log("View Placed : " + that._counter);
 
           if (that_._designMode) {
               oView.byId("passwordInput").setEnabled(false);
